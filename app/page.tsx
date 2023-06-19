@@ -38,6 +38,7 @@ export default function Home() {
       <div className="z-10 w-full">
         
         <Scraper />
+        
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
