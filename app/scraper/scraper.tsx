@@ -1,5 +1,4 @@
 'use client'
-/* eslint react/no-unescaped-entities */
 
 import { useState } from 'react'
 import { FormEvent } from 'react'
