@@ -84,7 +84,7 @@ export default function Scraper() {
             <ul className="list-inside">
               {pageData.WordOccurences.map((wo, i) => (
                 <li className="pb-3" key={i}>
-                  <p>"{wo.Value}" Count: {wo.Count}</p>
+                  <p>&quot;{wo.Value}&quot; Count: {wo.Count}</p>
                 </li>
               ))}
             </ul>
