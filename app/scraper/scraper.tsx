@@ -1,10 +1,9 @@
-/* eslint react/no-unescaped-entities */
 'use client'
- 
+/* eslint react/no-unescaped-entities */
+
 import { useState } from 'react'
 import { FormEvent } from 'react'
 import Image from "next/image"
-
  
 export default function Scraper() {
   const [pageData, setPageData] = useState(undefined)
