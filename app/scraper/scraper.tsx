@@ -39,7 +39,6 @@ export default function Scraper() {
     // Get the response data from server as JSON.
     // If server returns the name submitted, that means the form works.
     const result = await response.json()
-    //alert(`Word Count: ${result.WordCount}`)
     setPageData(result);
     setActive(true)
   }
@@ -49,8 +48,8 @@ export default function Scraper() {
     <div>        
         <h1 className={`mb-3 text-2xl font-semibold`}>Scrape Content from URL: </h1>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="first" className="pr-5">URL:</label>
-          <input type="text" id="url" name="url" required disabled={!active} className="w-1/2"/>
+          <label htmlFor="first" className="pr-5">URL <small>(must include http:// or https://)</small>:</label>
+          <input type="text" id="url" name="url" placeholder="https://" required disabled={!active} className="w-1/2"/>
           <button type="submit" disabled={!active} className="pl-5 pr-5">Submit</button>
         </form>
         <div className="pt-5 content-center" style={{
