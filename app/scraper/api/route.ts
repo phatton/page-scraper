@@ -1,9 +1,14 @@
 import { NextResponse } from 'next/server'
  
 export async function POST(request: Request) {
+    const functionUrl : string | undefined = process.env.SCRAPER_FUNCTION_URL
     const urlRequest = await request.json() // urlRequest now contains body
-    //console.log(urlRequest);//'http://127.0.0.1:7071/api/HttpScraperFunction'
-    const res = await fetch('https://httpscraperfunction.azurewebsites.net/api/httpscraperfunction', {
+
+    if(typeof functionUrl === undefined || !functionUrl){
+        return NextResponse.error()
+    }
+    
+    const res = await fetch(functionUrl as string, {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
