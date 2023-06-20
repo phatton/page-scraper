@@ -5,7 +5,7 @@ import { FormEvent } from 'react'
 import Image from "next/image"
  
 export default function Scraper() {
-  const [pageData, setPageData] = useState(undefined)
+  const [pageData, setPageData] = useState<IPageData>()
   const [active, setActive] = useState(true)
 
   const handleSubmit = async (event: FormEvent) => {
