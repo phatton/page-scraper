@@ -49,7 +49,8 @@ export default function Scraper() {
         <h1 className={`mb-3 text-2xl font-semibold`}>Scrape Content from URL: </h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="first" className="pr-5">URL <small>(must include http:// or https://)</small>:</label>
-          <input type="text" id="url" name="url" placeholder="https://" required disabled={!active} className="w-1/2"/>
+          <input type="text" id="url" name="url" placeholder="https://" required disabled={!active} className="w-1/2" style={{
+          color:"black" }}/>
           <button type="submit" disabled={!active} className="pl-5 pr-5">Submit</button>
         </form>
         <div className="pt-5 content-center" style={{
