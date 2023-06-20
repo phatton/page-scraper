@@ -39,7 +39,7 @@ export default function Scraper() {
     // Get the response data from server as JSON.
     // If server returns the name submitted, that means the form works.
     const result = await response.json()
-    alert(`Word Count: ${result.WordCount}`)
+    //alert(`Word Count: ${result.WordCount}`)
     setPageData(result);
     setActive(true)
   }
